@@ -18,8 +18,19 @@ The official repo for [IDMR: Towards Instance-Driven Precise Visual Corresponden
  - [IDMR-26B](https://huggingface.co/lbw18601752667/IDMR-26B)
  - More to come!
 
+## Installation
+```bash
+git clone https://github.com/BwLiu01/IDMR.git
+cd IDMR
+pip install -r requirements.txt
+```
+
 ## Inference & Examples
-Coming soon
+- Inference examples with Gradio: [IDMR-Demo](https://huggingface.co/spaces/lbw18601752667/IDMR-demo)
+- Inference locally:
+```bash
+python inference.py
+```
 
 ## Data
 Comming soon

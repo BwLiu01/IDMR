@@ -1,0 +1,12 @@
+torch==2.4.0
+transformers==4.46.3
+accelerate==0.29.1
+flash-attn==2.6.3
+datasets==2.20.0
+numpy==1.26.4
+sentencepiece==0.1.99
+timm==0.9.12
+tqdm==4.67.1
+peft==0.11.1
+einops==0.6.1
+gradio==5.21.0
