@@ -1,3 +1,6 @@
 wandb/
+swanlog/
 __pycache__/
 imgs/
+data/
+ckpt/

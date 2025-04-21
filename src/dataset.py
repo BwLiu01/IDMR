@@ -64,6 +64,8 @@ class TrainDataset(Dataset):
             return None
         if resolution == "high":
             image = image.resize((1344, 1344))
+        elif resolution == "mid":
+            image = image.resize((448, 448))
         elif resolution == "low":
             image = image.resize((336, 336))
 
@@ -83,7 +85,7 @@ class TrainDataset(Dataset):
         elif self.model_args.model_backbone == "qwen":
             return self._process_image(image, "low")
         elif self.model_args.model_backbone == "internvl_2_5":
-            return self._process_image(image, "high")
+            return self._process_image(image, "mid")
         else:
             return image
 
@@ -180,6 +182,8 @@ class EvalDataset(Dataset):
             return None
         if resolution == "high":
             image = image.resize((1344, 1344))
+        elif resolution == "mid":
+            image = image.resize((448, 448))
         else:
             image = image.resize((336, 336))
         return image
@@ -195,7 +199,7 @@ class EvalDataset(Dataset):
         if self.model_args.model_backbone == "llava_next":
             return self._process_image(image, "high")
         elif self.model_args.model_backbone == "internvl_2_5":
-            return self._process_image(image, "high")
+            return self._process_image(image, "mid")
         else:
             return image
         return image

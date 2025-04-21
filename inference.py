@@ -9,7 +9,6 @@ from transformers import AutoTokenizer, AutoImageProcessor
 device = "cuda"
 IMAGE_TOKEN = "<image>"
 
-# Load model and processor
 model_args = ModelArguments(model_name="lbw18601752667/IDMR-2B", model_backbone="internvl_2_5")
 
 # Initialize processor
