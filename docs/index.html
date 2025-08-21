@@ -8,17 +8,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>IDMR: Instance-Driven Multimodal Retrieval</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
@@ -32,7 +27,6 @@
   <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
-  <!-- <link rel="icon" href="./static/images/favicon.svg"> -->
   <link rel="icon" href="./static/images/logo.png">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -43,6 +37,7 @@
 </head>
 <body>
 
+<!-- Navigation Bar -->
 <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
     <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -54,36 +49,23 @@
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
       <a class="navbar-item" href="#">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
+        <span class="icon"><i class="fas fa-home"></i></span>
       </a>
-      <!-- <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="#">Short-term Memory (Coming Soon)</a>
-          <a class="navbar-item" href="#">Embodied Navigation (Coming Soon)</a>
-        </div>
-      </div> -->
       <a class="navbar-item" href="#">Short-term Memory (Coming Soon)</a>
       <a class="navbar-item" href="#">Embodied Navigation (Coming Soon)</a>
     </div>
   </div>
 </nav>
 
-<!-- title author -->
+<!-- Title, Authors, and Links -->
 <section class="hero">
   <div class="hero-body">
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
           <h1 class="title is-1 publication-title">
-            <!-- <img src="./static/images/logo.png" alt="IDMR Logo" style="width: 42px; height: 42px;"> -->
             IDMR: Towards Instance-Driven Precise Visual Correspondence in Multimodal Retrieval
           </h1>
-          
           <div class="is-size-5 publication-authors">
             <span class="author-block">Bangwei Liu<sup>1</sup>,</span>
             <span class="author-block">Yicheng Bao<sup>1</sup>,</span>
@@ -101,7 +83,7 @@
           <div class="column has-text-centered">
             <div class="publication-links">
               <span class="link-block">
-                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                <a href="https://arxiv.org/pdf/2504.00954" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon"><i class="fas fa-file-pdf"></i></span>
                   <span>Paper</span>
                 </a>
@@ -138,77 +120,64 @@
   </div>
 </section>
 
-<!-- Demo video -->
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/idmr-demo.mov" type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">IDMR</span> enables embodied agents to build precise, instance-level long-term visual memory for real-world applications.
-      </h2>
-    </div>
-  </div>
-</section>
 
-<!-- 1x4 Demo Video Grid 轮播区 -->
-<!-- <section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="idmr-demo-carousel" class="carousel idmr-demo-carousel">
-        <div class="item">
-          <video poster="" id="demo-1" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/demo-1.mov" type="video/mp4">
-          </video>
-          <div class="has-text-centered is-size-6" style="margin-top:0.5em;">Example 1: Instance retrieval in a kitchen scenario</div>
-        </div>
-        <div class="item">
-          <video poster="" id="demo-2" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/demo-2.mov" type="video/mp4">
-          </video>
-          <div class="has-text-centered is-size-6" style="margin-top:0.5em;">Example 2: Instance retrieval across different rooms</div>
-        </div>
-        <div class="item">
-          <video poster="" id="demo-3" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/demo-3.mov" type="video/mp4">
-          </video>
-          <div class="has-text-centered is-size-6" style="margin-top:0.5em;">Example 3: Instance retrieval with occlusion</div>
-        </div>
-        <div class="item">
-          <video poster="" id="demo-4" autoplay muted loop playsinline height="100%">
-            <source src="./static/videos/demo-4.mov" type="video/mp4">
-          </video>
-          <div class="has-text-centered is-size-6" style="margin-top:0.5em;">Example 4: Instance retrieval in dynamic scenes</div>
+
+<!-- SECTION 1: INTRODUCTION & CORE INNOVATION -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered" style="margin-top: -4rem;">
+      <div class="column is-three-quarters has-text-centered">
+        <img src="./static/images/benchmark_comparison.png" alt="IDMR Benchmark Comparison" style="border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+        <div class="content has-text-justified" style="margin-top: 1rem;">
+          <p>
+            Our key innovation lies in defining a task that requires both <strong>instance-level image relation</strong> and deep <strong>scene understanding</strong>. As shown above, IDMR carves out a unique and challenging space compared to existing benchmarks. It is the first to combine instance-level precision with complex, text-described contextual requirements, directly addressing the needs of advanced applications like embodied AI memory.
+          </p>
         </div>
       </div>
     </div>
-  </div>
-</section> -->
 
-<!-- 2x2 Demo Video Grid 轮播区 -->
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">A New Frontier for Multimodal Retrieval</h2>
+        <div class="content has-text-justified">
+          <p>
+            Current multimodal retrieval systems often fail at a critical real-world task: identifying a <strong>specific object instance</strong> in a new visual context based on text. Most benchmarks focus on retrieving images that are globally similar or contain objects of the same <em>category</em>, not the exact same <em>instance</em>.
+          </p>
+          <p>
+            <strong>Instance-Driven Multimodal Retrieval (IDMR)</strong> introduces a new task to bridge this gap. Given an image of a specific instance (e.g., <em>this particular</em> blue mug) and a text query (e.g., "find it next to the coffee machine"), the goal is to retrieve an image containing that exact same mug in the described scene.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+
+
+<!-- SECTION 2: DEMOS -->
 <section class="section">
   <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">IDMR Demo Examples</h2>
+    <h2 class="title is-3 has-text-centered">Demos</h2>
     <div class="columns is-centered">
-      <div class="column"> <!-- 让内容更宽 -->
+      <div class="column">
         <div class="columns">
           <div class="column has-text-centered">
-            <video src="./static/videos/demo-1.mov" autoplay muted loop playsinline style="width:100%; max-width:500px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 0.5em;"></video>
+            <video src="./static/videos/demo-1.mov" autoplay muted loop playsinline style="width:100%; max-width:500px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); margin-bottom: 0.5em;"></video>
             <div class="is-size-6">Example 1: Instance retrieval in a kitchen scenario</div>
           </div>
           <div class="column has-text-centered">
-            <video src="./static/videos/demo-2.mov" autoplay muted loop playsinline style="width:100%; max-width:500px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 0.5em;"></video>
+            <video src="./static/videos/demo-2.mov" autoplay muted loop playsinline style="width:100%; max-width:500px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); margin-bottom: 0.5em;"></video>
             <div class="is-size-6">Example 2: Specific frame retrieval in a movie</div>
           </div>
         </div>
         <div class="columns">
           <div class="column has-text-centered">
-            <video src="./static/videos/demo-3.mov" autoplay muted loop playsinline style="width:100%; max-width:500px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 0.5em;"></video>
+            <video src="./static/videos/demo-3.mov" autoplay muted loop playsinline style="width:100%; max-width:500px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); margin-bottom: 0.5em;"></video>
             <div class="is-size-6">Example 3: Precise question answering with video memory</div>
           </div>
           <div class="column has-text-centered">
-            <video src="./static/videos/demo-4.mov" autoplay muted loop playsinline style="width:100%; max-width:500px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 0.5em;"></video>
+            <video src="./static/videos/demo-4.mov" autoplay muted loop playsinline style="width:100%; max-width:500px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); margin-bottom: 0.5em;"></video>
             <div class="is-size-6">Example 4: Image retrieval in a photo album</div>
           </div>
         </div>
@@ -217,52 +186,56 @@
   </div>
 </section>
 
-<!-- Motivation & Embodied Memory -->
-<section class="section">
+<!-- SECTION 3: METHOD -->
+<section class="section is-light">
   <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Motivation & Embodied Memory</h2>
-        <div class="content has-text-justified">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">Method: A Scalable Data Synthesis Pipeline</h2>
+        <div class="content has-text-justified" style="margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
           <p>
-            <b>Instance-Driven Multimodal Retrieval (IDMR)</b> is designed to address the challenge of retrieving images containing the same instance as a query image, conditioned on a scenario described by text. This capability is crucial for <b>embodied AI</b>—enabling robots and agents to build <b>long-term, instance-level visual memory</b> that supports precise recall and reasoning in complex, dynamic environments.
-          </p>
-          <p>
-            Unlike traditional retrieval tasks that focus on global similarity or category-level matching, IDMR emphasizes <b>fine-grained, instance-level correspondence</b> across diverse contexts. This makes it a foundational technology for embodied memory, where agents must remember and localize specific objects or entities over long time horizons.
-          </p>
-          <p>
-            <b>Why is this important for Embodied AI?</b> In real-world scenarios, embodied agents (such as robots or AR assistants) need to recall where a specific object was seen, under what context, and how it relates to user instructions. IDMR provides the mechanism for such <b>long-term memory</b>, complementing ongoing research in <b>short-term memory</b> and <b>navigation</b>. In the future, these components will be linked together to form a comprehensive embodied intelligence system.
+            To overcome the scarcity of instance-level retrieval data, we propose a scalable synthesis pipeline. We leverage large-scale object detection datasets to create training pairs by treating cropped objects as queries and their original images as targets. An MLLM then generates rich, context-aware text descriptions. This allows us to automatically generate over 557K high-quality training samples, while our zero-shot benchmark (IDMR-Bench) is constructed from distinct, real-world video sources to ensure fair evaluation of model generalization.
           </p>
         </div>
-      </div>
-    </div>
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-half">
-        <img src="./static/images/idmr_query.jpg" style="max-width: 45%; margin: 0 2% 0 0; display: inline-block;" alt="IDMR Query Example">
-        <img src="./static/images/idmr_target.jpg" style="max-width: 45%; display: inline-block;" alt="IDMR Target Example">
-        <p class="is-size-6">Example: Given a query image (left) and a scenario description, IDMR retrieves the target image (right) containing the same instance in a new context.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Abstract -->
-<section class="section">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            Multimodal retrieval systems are becoming increasingly vital for cutting-edge AI technologies, such as embodied AI and AI-driven digital content industries. However, current multimodal retrieval tasks lack sufficient complexity and demonstrate limited practical application value. We propose Instance-Driven Multimodal Image Retrieval (IDMR), a novel task that requires models to retrieve images containing the same instance as a query image while matching a text-described scenario. Unlike existing retrieval tasks focused on global image similarity or category-level matching, IDMR demands fine-grained instance-level consistency across diverse contexts. To benchmark this capability, we develop IDMR-bench using real-world object tracking and first-person video data. Addressing the scarcity of training data, we propose a cross-domain synthesis method that creates 557K training samples by cropping objects from standard detection datasets. Our Multimodal Large Language Model (MLLM) based retrieval model, trained on 1.2M samples, outperforms state-of-the-art approaches on both traditional benchmarks and our zero-shot IDMR-bench. Experimental results demonstrate previous models' limitations in instance-aware retrieval and highlight the potential of MLLM for advanced retrieval applications.
-          </p>
+        <div class="has-text-centered" style="margin-top: 2rem;">
+          <img src="./static/images/data_pipeline.png" alt="IDMR Data Pipeline" style="max-width: 90%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- BibTeX -->
+<!-- SECTION 4: CORE APPLICATION & VISION -->
+<section class="section is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        
+        <!-- Title and Text Content -->
+        <h2 class="title is-3 has-text-centered">Core Application: Long-Term Memory for Embodied AI</h2>
+        <div class="content has-text-justified">
+          <p>
+            IDMR is a foundational technology for <strong>embodied AI</strong>, enabling agents to build <strong>long-term, instance-level visual memory</strong>. This capability is crucial for robots and AR assistants to recall where a specific object was seen, under what context, and how it relates to user instructions.
+          </p>
+          <p>
+            By focusing on fine-grained, instance-level correspondence, IDMR provides the mechanism for precise recall and reasoning in complex, dynamic environments. This complements ongoing research in short-term memory and navigation, paving the way for a comprehensive embodied intelligence system.
+          </p>
+        </div>
+
+        <!-- Figure with Image and Caption -->
+        <figure class="has-text-centered" style="margin-top: 2.5rem;">
+          <img src="./static/images/1.png" alt="Embodied AI Memory" style="max-width: 90%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+          <figcaption class="is-size-6" style="margin-top: 1em;">
+            Example: An embodied AI agent retrieves a specific instance (e.g., a blue mug) based on a text query, demonstrating long-term memory capabilities.
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: BIBTEX -->
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
@@ -275,23 +248,17 @@
   </div>
 </section>
 
-<!-- footer -->
+<!-- Footer -->
 <footer class="footer">
   <div class="container">
-    <div class="content has-text-centered">
-      <!-- 移除Nerfies PDF和GitHub链接，仅保留版权声明 -->
-    </div>
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
           </p>
           <p>
-            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which you do not want on your website.
+            You are free to borrow the source code of this website. Please link back to this page in the footer. Remember to remove the analytics code from the header.
           </p>
         </div>
       </div>
