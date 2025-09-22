@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="IDMR: Instance-Driven Multimodal Retrieval for Embodied Long-term Memory">
+  <meta name="keywords" content="IDMR, Multimodal Retrieval, Embodied AI, Long-term Memory">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IDMR: Instance-Driven Multimodal Retrieval</title>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/logo.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="#">
+        <span class="icon"><i class="fas fa-home"></i></span>
+      </a>
+      <a class="navbar-item" href="#">Short-term Memory (Coming Soon)</a>
+      <a class="navbar-item" href="#">Embodied Navigation (Coming Soon)</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Title, Authors, and Links -->
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">
+            IDMR: Towards Instance-Driven Precise Visual Correspondence in Multimodal Retrieval
+          </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">Bangwei Liu<sup>1</sup>,</span>
+            <span class="author-block">Yicheng Bao<sup>1</sup>,</span>
+            <span class="author-block">Shaohui Lin<sup>1</sup>,</span>
+            <span class="author-block">Xuhong Wang<sup>2</sup><span style="font-size: 0.8em;">✉</span>,</span>
+            <span class="author-block">Xin Tan<sup>1</sup><span style="font-size: 0.8em;">✉</span>,</span>
+            <span class="author-block">Yingchun Wang<sup>2</sup>,</span>
+            <span class="author-block">Yuan Xie<sup>1</sup>,</span>
+            <span class="author-block">Chaochao Lu<sup>2</sup></span>
+          </div>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>East China Normal University,</span>
+            <span class="author-block"><sup>2</sup>Shanghai AI Laboratory</span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <span class="link-block">
+                <a href="https://arxiv.org/pdf/2504.00954" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2504.00954" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="ai ai-arxiv"></i></span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-youtube"></i></span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://github.com/BwLiu01/IDMR" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="fab fa-github"></i></span>
+                  <span>Code</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon"><i class="far fa-images"></i></span>
+                  <span>Data</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- SECTION 1: INTRODUCTION & CORE INNOVATION -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered" style="margin-top: -4rem;">
+      <div class="column is-three-quarters has-text-centered">
+        <img src="./static/images/benchmark_comparison.png" alt="IDMR Benchmark Comparison" style="border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+        <div class="content has-text-justified" style="margin-top: 1rem;">
+          <p>
+            Our key innovation lies in defining a task that requires both <strong>instance-level image relation</strong> and deep <strong>scene understanding</strong>. As shown above, IDMR carves out a unique and challenging space compared to existing benchmarks. It is the first to combine instance-level precision with complex, text-described contextual requirements, directly addressing the needs of advanced applications like embodied AI memory.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3 has-text-centered">A New Frontier for Multimodal Retrieval</h2>
+        <div class="content has-text-justified">
+          <p>
+            Current multimodal retrieval systems often fail at a critical real-world task: identifying a <strong>specific object instance</strong> in a new visual context based on text. Most benchmarks focus on retrieving images that are globally similar or contain objects of the same <em>category</em>, not the exact same <em>instance</em>.
+          </p>
+          <p>
+            <strong>Instance-Driven Multimodal Retrieval (IDMR)</strong> introduces a new task to bridge this gap. Given an image of a specific instance (e.g., <em>this particular</em> blue mug) and a text query (e.g., "find it next to the coffee machine"), the goal is to retrieve an image containing that exact same mug in the described scene.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</section>
+
+
+<!-- SECTION 2: DEMOS -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered">Demos</h2>
+    <div class="columns is-centered">
+      <div class="column">
+        <div class="columns">
+          <div class="column has-text-centered">
+            <video src="./static/videos/demo-1.mov" autoplay muted loop playsinline style="width:100%; max-width:500px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); margin-bottom: 0.5em;"></video>
+            <div class="is-size-6">Example 1: Instance retrieval in a kitchen scenario</div>
+          </div>
+          <div class="column has-text-centered">
+            <video src="./static/videos/demo-2.mov" autoplay muted loop playsinline style="width:100%; max-width:500px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); margin-bottom: 0.5em;"></video>
+            <div class="is-size-6">Example 2: Specific frame retrieval in a movie</div>
+          </div>
+        </div>
+        <div class="columns">
+          <div class="column has-text-centered">
+            <video src="./static/videos/demo-3.mov" autoplay muted loop playsinline style="width:100%; max-width:500px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); margin-bottom: 0.5em;"></video>
+            <div class="is-size-6">Example 3: Precise question answering with video memory</div>
+          </div>
+          <div class="column has-text-centered">
+            <video src="./static/videos/demo-4.mov" autoplay muted loop playsinline style="width:100%; max-width:500px; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1); margin-bottom: 0.5em;"></video>
+            <div class="is-size-6">Example 4: Image retrieval in a photo album</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 3: METHOD -->
+<section class="section is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3 has-text-centered">Method: A Scalable Data Synthesis Pipeline</h2>
+        <div class="content has-text-justified" style="margin-top: 1rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+          <p>
+            To overcome the scarcity of instance-level retrieval data, we propose a scalable synthesis pipeline. We leverage large-scale object detection datasets to create training pairs by treating cropped objects as queries and their original images as targets. An MLLM then generates rich, context-aware text descriptions. This allows us to automatically generate over 557K high-quality training samples, while our zero-shot benchmark (IDMR-Bench) is constructed from distinct, real-world video sources to ensure fair evaluation of model generalization.
+          </p>
+        </div>
+        <div class="has-text-centered" style="margin-top: 2rem;">
+          <img src="./static/images/data_pipeline.png" alt="IDMR Data Pipeline" style="max-width: 90%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4: CORE APPLICATION & VISION -->
+<section class="section is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-four-fifths">
+        
+        <!-- Title and Text Content -->
+        <h2 class="title is-3 has-text-centered">Core Application: Long-Term Memory for Embodied AI</h2>
+        <div class="content has-text-justified">
+          <p>
+            IDMR is a foundational technology for <strong>embodied AI</strong>, enabling agents to build <strong>long-term, instance-level visual memory</strong>. This capability is crucial for robots and AR assistants to recall where a specific object was seen, under what context, and how it relates to user instructions.
+          </p>
+          <p>
+            By focusing on fine-grained, instance-level correspondence, IDMR provides the mechanism for precise recall and reasoning in complex, dynamic environments. This complements ongoing research in short-term memory and navigation, paving the way for a comprehensive embodied intelligence system.
+          </p>
+        </div>
+
+        <!-- Figure with Image and Caption -->
+        <figure class="has-text-centered" style="margin-top: 2.5rem;">
+          <img src="./static/images/1.png" alt="Embodied AI Memory" style="max-width: 90%; border-radius: 12px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+          <figcaption class="is-size-6" style="margin-top: 1em;">
+            Example: An embodied AI agent retrieves a specific instance (e.g., a blue mug) based on a text query, demonstrating long-term memory capabilities.
+          </figcaption>
+        </figure>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 5: BIBTEX -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{liu2024idmr,
+  author    = {Bangwei Liu and Yicheng Bao and Shaohui Lin and Xuhong Wang and Xin Tan and Yingchun Wang and Yuan Xie and Chaochao Lu},
+  title     = {IDMR: Towards Instance-Driven Precise Visual Correspondence in Multimodal Retrieval},
+  journal   = {arXiv preprint arXiv:2504.00954},
+  year      = {2025},
+}</code></pre>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            You are free to borrow the source code of this website. Please link back to this page in the footer. Remember to remove the analytics code from the header.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
