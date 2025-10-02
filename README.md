@@ -33,7 +33,11 @@ python inference.py
 ```
 
 ## Data
-Comming soon
+
+We release both the training and test splits of IDMR on Hugging Face Datasets:
+
+* **Training Set**: [🤗 lbw18601752667/IDMR-train](https://huggingface.co/datasets/lbw18601752667/IDMR-train)
+* **Test Set**: [🤗 lbw18601752667/IDMR-test](https://huggingface.co/datasets/lbw18601752667/IDMR-test)
 
 ## Training
 Run the following script to train IDMR.
@@ -58,6 +62,23 @@ torchrun --nproc_per_node=8 --master_port=22459 --max_restarts=0 train.py \
  --temperature 0.02 --per_device_train_batch_size 64 \
  --lora --lora_r 8 \
  --grad_cache True --gc_q_chunk_size 8 --gc_p_chunk_size 8 --wandb True\
+```
+## Evaluation
+Please run `eval.sh`.
+
+* Evaluates both **in-domain** and **out-of-domain** splits.
+* Evaluation data can be directly downloaded from [IDMR-test](https://huggingface.co/datasets/lbw18601752667/IDMR-test).
+
+
+## Citation
+
+```bibtex
+@article{liu2025idmr,
+  title   = {IDMR: Towards Instance-Driven Precise Visual Correspondence in Multimodal Retrieval},
+  author={Bangwei Liu and Yicheng Bao and Shaohui Lin and Xuhong Wang and Xin Tan and Yingchun Wang and Yuan Xie and Chaochao Lu},
+  journal = {arXiv preprint arXiv:2504.00954},
+  year    = {2025}
+}
 ```
 
 
